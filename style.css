@@ -1,0 +1,86 @@
+html {
+  font-size: 100% !important;
+}
+.clr-fl::before,
+.clr-fl::after {
+  content: "";
+  display: table;
+}
+.clr-fl::after {
+  clear: both;
+}
+.time-container {
+  max-width: calc(100% - 30px);
+  margin: 0 auto;
+  text-align: center;
+}
+.timer > div {
+  display: inline-block;
+  padding: 1rem;
+  font-size: 5rem;
+}
+.timer > div.jst-clearDiv {
+  padding: 0;
+  margin: 0;
+}
+.timer-label {
+  display: block;
+  font-size: 1.5rem;
+  text-align: left;
+  margin-left: 0.5rem;
+}
+.timer-btn {
+  padding: 1rem 2rem;
+  color: #fff;
+  font-size: 1rem;
+}
+.time-control-container {
+  margin-top: 1.5rem;
+}
+.timer-btn:link,
+.timer-btn:visited {
+  max-width: 200px;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-right: 1.5rem;
+  text-decoration: none;
+}
+.timer-btn:active,
+.timer-btn:hover {
+  text-decoration: none;
+}
+.timer-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0px 0px 10px 5px rgba(224, 224, 224, 0.9);
+}
+.timer-btn--timerstart,
+.timer-btn--timerresume {
+  background-color: #68bd6a;
+}
+.timer-btn--timerpause {
+  background-color: #e54b22;
+}
+.timer-btn--timerreset {
+  background-color: rgb(245, 181, 44);
+}
+p.counter_above_text {
+  margin: 0;
+}
+p.counter_below_text {
+  margin-top: 1rem;
+}
+@media (max-width: 480px) {
+  .timer > div {
+    display: inline-block;
+    padding: 0.5rem;
+    font-size: 3rem;
+  }
+  .timer-btn {
+    padding: 0.8rem 1.2rem;
+  }
+  .timer-label {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
