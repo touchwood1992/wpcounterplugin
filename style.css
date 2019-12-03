@@ -1,6 +1,3 @@
-html {
-  font-size: 100% !important;
-}
 .clr-fl::before,
 .clr-fl::after {
   content: "";
@@ -14,10 +11,20 @@ html {
   margin: 0 auto;
   text-align: center;
 }
-.timer > div {
+.timer .jst-hours,
+.timer .jst-minutes,
+.timer .jst-seconds {
   display: inline-block;
-  padding: 1rem;
+  padding: 0.2em;
   font-size: 5rem;
+  vertical-align: middle;
+  line-height: 1.5;
+}
+.timer .dots {
+  display: inline-block;
+  font-size: 5rem;
+  position: relative;
+  bottom: 0.07em;
 }
 .timer > div.jst-clearDiv {
   padding: 0;
@@ -27,23 +34,23 @@ html {
   display: block;
   font-size: 1.5rem;
   text-align: left;
-  margin-left: 0.5rem;
+  margin-left: 0.33em;
 }
 .timer-btn {
-  padding: 1rem 2rem;
+  padding: 1em 2em;
   color: #fff;
   font-size: 1rem;
 }
 .time-control-container {
-  margin-top: 1.5rem;
+  margin-top: 1.5em;
 }
 .timer-btn:link,
 .timer-btn:visited {
-  max-width: 200px;
+  max-width: 13rem;
   display: inline-block;
   cursor: pointer;
   text-transform: uppercase;
-  margin-right: 1.5rem;
+  margin: 0.5em;
   text-decoration: none;
 }
 .timer-btn:active,
@@ -70,14 +77,20 @@ p.counter_above_text {
 p.counter_below_text {
   margin-top: 1rem;
 }
-@media (max-width: 480px) {
-  .timer > div {
+@media (max-width: 576px) {
+  .timer .jst-hours,
+  .timer .jst-minutes,
+  .timer .jst-seconds {
     display: inline-block;
-    padding: 0.5rem;
+    padding: 0.05em;
+    font-size: 3rem;
+  }
+  .timer .dots {
+    display: inline-block;
     font-size: 3rem;
   }
   .timer-btn {
-    padding: 0.8rem 1.2rem;
+    padding: 0.8em 1.2em;
   }
   .timer-label {
     font-size: 1rem;

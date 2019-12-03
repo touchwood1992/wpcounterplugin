@@ -80,17 +80,17 @@
 
       var seconds = document.createElement(that._options.elementContainer);
       seconds.innerHTML =
-        s + " <span class='timer-label'>" + getLabels.seconds + "</span>";
+        s + "<span class='timer-label'>" + getLabels.seconds + "</span>";
       seconds.className = that._options.classNameSeconds;
 
       var minutes = document.createElement(that._options.elementContainer);
       minutes.innerHTML =
-        m + " : <span class='timer-label'>" + getLabels.minutes + "</span>";
+        m + "<span class='timer-label'>" + getLabels.minutes + "</span>";
       minutes.className = that._options.classNameMinutes;
 
       var hours = document.createElement(that._options.elementContainer);
       hours.innerHTML =
-        h + " : <span class='timer-label'>" + getLabels.hours + "</span>";
+        h + "<span class='timer-label'>" + getLabels.hours + "</span>";
       hours.className = that._options.classNameHours;
 
       var clearElement = document.createElement(that._options.elementContainer);
@@ -107,7 +107,9 @@
 
       return timerBoxElement
         .append(hours)
+        .append("<div class='dots'>:</div>")
         .append(minutes)
+        .append("<div class='dots'>:</div>")
         .append(seconds)
         .append(clearElement);
     };
@@ -296,7 +298,6 @@
       .find(".jst-minutes")
       .html(
         initialValue +
-          " : " +
           "<span class='timer-label'>" +
           getLabels.minutes +
           "</span>"
@@ -305,7 +306,6 @@
       .find(".jst-hours")
       .html(
         initialValue +
-          " : " +
           "<span class='timer-label'>" +
           getLabels.hours +
           "</span>"
@@ -366,7 +366,6 @@
       .find("." + this._options.classNameMinutes)
       .html(
         finalValues.pop() +
-          " : " +
           "<span class='timer-label'>" +
           getLabels.minutes +
           "</span>"
@@ -375,7 +374,6 @@
       .find("." + this._options.classNameHours)
       .html(
         finalValues.pop() +
-          " : " +
           "<span class='timer-label'>" +
           getLabels.hours +
           "</span>"
